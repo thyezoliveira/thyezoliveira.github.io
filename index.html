@@ -11,19 +11,31 @@
     <div id="wrapper">
         <header>
             <h1>Thyéz de Oliveira</h1>
-            <nav id="menu">
-                <ul>
-                    <li><a href="https://github.com/thyezoliveira">GitHub</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=+5522998548514">Fale comigo!</a></li>
+            <nav>
+                <ul id="menu">
+                    <li><button id="aboutBtn" class="btnMenu">Sobre</button></li>
+                    <li><a class="btnMenu" href="https://github.com/thyezoliveira">GitHub</a></li>
+                    <li><a class="btnMenu" href="https://api.whatsapp.com/send?phone=+5522998548514">Fale comigo!</a></li>
                 </ul>
+                <button id="closeBtn" class="btnMenu hidden">Voltar</button>
             </nav>
-    
         </header>
+        <main class="hidden">
+            <section id="bio">
+                <h1>Olá, eu sou Thyéz!</h1>
+                <p>
+                    Estou aprendendo programaçao, por meio do estudo autodirigido e experimentaçao.
+                    Assisto videos, leio livros, participo de eventos online e pratico o que aprendo.
+                </p>
+                <p>Estarei usando este site e repositórios no github para guardar alguns dos meus experimentos.</p>
+            </section>
+        </main>
         <footer>
             <p>Feito por <span id="nome">
                 Thyéz de Oliveira
             </span> , 2020.</p>  
         </footer>
     </div>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

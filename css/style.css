@@ -4,6 +4,9 @@
     padding: 0;
 }
 
+
+/********************************************************************Globais*/
+/*Classes globais usadas para todo o html*/
 #wrapper {
     display: flexbox;
     overflow: hidden;
@@ -14,6 +17,18 @@ body {
     background-color: #333333;
     color: beige;
 }
+
+/*******************************************************************Sub classes*/
+/*Sub classes que sao manipuladas no Js*/
+
+.hidden {
+    display: none;
+}
+
+
+
+/****************************************************************Comuns*/
+/*Todo o resto do css*/
 
 body header {
     width: inherit;
@@ -36,23 +51,63 @@ body header nav {
 body header nav ul {
     list-style: none;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 body header nav ul li {
+    display: flex;
+    justify-content: center;
     margin-bottom: 25px;
 }
 
-body header nav ul li a {
-    display: block;
+body header nav ul li button.btnMenu {
     font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    margin-bottom: 15px;
+    padding: 15px 15px;
+    background-color: #333333;
+    transition: ease-in-out 100ms;
+}
+
+body header nav ul li button.btnMenu:hover {
+    font-weight: 200;
+}
+
+body header nav ul li .btnMenu {
+    font-weight: bold;
+    display: block;
     margin-bottom: 15px;
     padding: 15px 15px;
     color: beige;
     text-decoration: none;
-    transition: ease-in-out 200ms;
+    transition: ease-in-out 100ms;
 }
 
-body header nav ul li a:hover {
+body header nav ul li .btnMenu:hover {
+    background-color: #111111;
+    border-left: #aa2233 solid 3px;
+    border-right: #aa2233 solid 3px;
+    font-weight: 200;
+}
+
+body header nav button#closeBtn {
+    color: beige;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    align-self: center;
+    margin-bottom: 15px;
+    padding: 15px 15px;
+    background-color: rgba(0,0,0,0);
+    transition: ease-in-out 100ms;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+body header nav button#closeBtn:hover {
     font-weight: 200;
     background-color: #111111;
     border-left: #aa2233 solid 3px;
@@ -62,6 +117,28 @@ body header nav ul li a:hover {
 body header p {
     font-size: 10px;
     text-align: center;
+}
+
+body div#wrapper main {
+    transition: 300ms;
+    margin-bottom: 60px;
+}
+
+body div#wrapper main section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body div#wrapper main section h1 {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+body div#wrapper main section p {
+    font-weight: 100;
+    margin: 10px 0 10px 0;
+    padding-left: 10px;
+    border-left: #222222 solid 1px;
 }
 
 footer {
