@@ -1,6 +1,6 @@
 let aboutBtn = document.querySelector("#aboutBtn");
 let menu = document.querySelector("#menu");
-let closeBtn = document.querySelector("#closeBtn");
+let closeBtn = document.querySelector(".closeBtn");
 let main = document.querySelector("main");/* 
 let footer = document.querySelector("footer"); */
 

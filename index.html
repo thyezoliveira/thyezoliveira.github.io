@@ -10,14 +10,17 @@
 <body>
     <div id="wrapper">
         <header>
-            <h1>Thyéz de Oliveira</h1>
+            <div class="logo">
+                <img class="logo-icon" src="./images/coding.svg" alt="Coding">
+                <h1 class="logo-text">Thyéz de Oliveira</h1>
+            </div>
             <nav>
                 <ul id="menu">
-                    <li><button id="aboutBtn" class="btnMenu">Sobre</button></li>
-                    <li><a class="btnMenu" href="https://github.com/thyezoliveira">GitHub</a></li>
-                    <li><a class="btnMenu" href="https://api.whatsapp.com/send?phone=+5522998548514">Fale comigo!</a></li>
+                    <li><button id="aboutBtn" class="btnMenu"><img src="./images/about.svg"><h2>Sobre</h2></button></li>
+                    <li><button class="btnMenu"><img src="./images/github.svg"><h2>Github</h2></button></li>
+                    <li><button class="btnMenu"><img src="./images/whatsapp.svg"><h2>Contato</h2></button></li> <!-- <a class="btnMenu" href="https://api.whatsapp.com/send?phone=+5522998548514"><img src="./coding.svg">Fale comigo!</a> -->
                 </ul>
-                <button id="closeBtn" class="btnMenu hidden">Voltar</button>
+                <button class="closeBtn hidden"><img src="./images/previous.svg"></button>
             </nav>
         </header>
         <main class="hidden">
