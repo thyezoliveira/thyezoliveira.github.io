@@ -1,154 +1,20 @@
-*{
+* {
     border:0;
-    margin: 0;
-    padding: 0;
-}
-
-
-/********************************************************************Globais*/
-/*Classes globais usadas para todo o html*/
-#wrapper {
-    display: flexbox;
-    overflow: hidden;
+    margin:0;
+    padding:0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #333333;
-    color: beige;
-}
-
-/*******************************************************************Sub classes*/
-/*Sub classes que sao manipuladas no Js*/
-
-.hidden {
-    display: none;
-}
-
-
-
-/****************************************************************Comuns*/
-/*Todo o resto do css*/
-
-header {
-    width: inherit;
-}
-
-.logo {
+    font-family: 'Forum', cursive;
+    font-size: 12pt;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+}
+
+body > p {
+    background-color: rgb(255, 169, 41);
     padding: 5px;
-    margin: 20px 0;
-}
-
-.logo-icon {
-    width: 50px;
-}
-
-.logo-text {
-    font-weight: 100;
-    font-size: 18px;
-    margin-left: 15px;
-}
-
-nav {
-    display: flex;
-    padding: 5px 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-.btnMenu {
-    cursor: pointer;
-    font-size: 12px;
-    align-self: center;
-    background-color: #333333;
-    transition: ease-in-out 100ms;
-    color: beige;
-    text-decoration: none;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btnMenu:hover {
-    background-color: #2f2f2f;
-    color: brown;
-    border-radius: 15px;
-}
-
-.btnMenu img {
-    width: 40px;
-    margin: 10px 0;
-}
-
-.btnMenu h2 {
-    margin: 0 5px;
-}
-
-.closeBtn {
-    cursor: pointer;
-    transition: ease-in-out 100ms;
-    position: relative;
-    width: 40px;
-    border-radius: 15px;
-    background: none;
-}
-
-.closeBtn:hover {
-    fill: #333333;
-}
-
-.closeBtn img {
-    width: 100%;
-}
-
-main {
-    transition: 300ms;
-    margin-bottom: 60px;
-}
-
-main section {
-    width: 80%;
-    margin: 0 auto;
-}
-
-main section h1 {
-    font-weight: 300;
-    margin-bottom: 15px;
-}
-
-main section p {
-    font-weight: 100;
-    margin: 10px 0 10px 0;
-    padding-left: 10px;
-    border-left: #222222 solid 1px;
-}
-
-footer {
-    width: 100%;
-    height: 40px;
-    background-color: #aa2233;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    position: fixed;
-}
-
-footer p {
-    font-weight: normal;
-    display: block;
-    align-self: center;
-}
-
-footer p span#nome{
-    font-weight: bold;
 }
