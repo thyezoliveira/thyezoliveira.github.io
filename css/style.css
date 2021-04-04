@@ -58,9 +58,10 @@ main {
 }
 
 .bio_avatar {
+    margin-top: 30px;
     width: 134px;
     height: 134px;
-    border-radius: 100%;   
+    border-radius: 100%;
     border-style: solid;
     border-width: 10px;
     border-color: #3f4a3f;
@@ -363,6 +364,19 @@ a#btnTwitter {
         display: none;
     }
 
+    .section_title {
+        color: #FFD766;
+        width: auto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        background-color: rgb(63 74 63 / 70%);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
     .bio_skills_holder_skill {
         display: flex;
         flex-direction: column;
@@ -396,6 +410,7 @@ a#btnTwitter {
         width: auto;
         height: auto;
         display: flex;
+        align-items: center;
         flex-direction: column;
         margin-top: 0;
     }
@@ -456,5 +471,19 @@ a#btnTwitter {
     .skills_block {
         display: flex;
         align-items: flex-end;
+    }
+
+    .projects_article {
+        background-color: #1F1F1F;
+        border-top-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        width: 256px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-bottom: 5px;
+        margin: 10px;
+        border: 3px solid #3f4a3f;
     }
 }
