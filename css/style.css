@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+@import url(./animations.css);
 
 * {
     border:0;
@@ -15,6 +16,9 @@ body {
     height: 100vh;
     background-color: #1F1F1F;
     min-width: 344px;
+    background-image: url("https://thumbs.gfycat.com/RashScornfulAtlanticridleyturtle-size_restricted.gif");
+    background-size: cover;
+    background-position-x: center;
 }
 
 .header {
@@ -46,17 +50,21 @@ main {
 .bio_wrapper {
     display: flex;
     flex-direction: column;
+    margin: 3px;
+    width: 90%;
+    border-radius: 10px;
     align-items: center;
+    background-color: rgb(63 74 63 / 80%);
 }
 
 .bio_avatar {
-    margin-top: 36px;
     width: 134px;
     height: 134px;
     border-radius: 100%;   
     border-style: solid;
     border-width: 10px;
     border-color: #3f4a3f;
+    animation: jump 5s ease-in-out infinite;
 }
 
 .bio_text {
@@ -378,11 +386,10 @@ a#btnTwitter {
     
     .bio_avatar {
         float: left;
-        margin-top: 36px;
         width: 134px;
         height: 134px;
         border-radius: 100%;
-        margin: 20px;
+        margin: 32px;
     }
 
     .projects {
