@@ -15,10 +15,10 @@
     <main>
         <section class="bio">
             <div class="img_wrapper">
-                <img class="bio_avatar" src="https://avatars.githubusercontent.com/u/18426154?v=4" alt="Foto de Thyéz Oliveira">
+                <img id="avatar1" class="bio_avatar" src="https://avatars.githubusercontent.com/u/18426154?v=4" alt="Foto de Thyéz Oliveira">
             </div>
             <div class="bio_wrapper">
-                
+                <img id="avatar2" class="bio_avatar" src="https://avatars.githubusercontent.com/u/18426154?v=4" alt="Foto de Thyéz Oliveira">
                 <p class="bio_text">
                     Meu nome é Thyéz, eu faço sites e sistemas web. Domino html, css, Javascript, tenho noções de design e de
                     processos criativos. Tenho capacidade de me adaptar facilmente e estou constantemente estudando. Levo a
@@ -31,16 +31,34 @@
                         
                             <div class="bio_skills_holder">
                                 <div id="iconHtml" class="bio_skills_holder_skill">
-                                    <img src="./assets/iconHtml.svg" alt="" id="iconHtml_logo" class="bio_skills_holder_skill_icon">
-                                    <h3>HTML</h3>
+                                    <div class="back">
+                                        <img src="./assets/iconHtml.svg" alt="" id="iconHtml_logo" class="bio_skills_holder_skill_icon">
+                                    </div>
+                                    <div class="front">
+                                        <div class="front_text">
+                                            <h3>HTML</h3>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="iconCss" class="bio_skills_holder_skill">
-                                    <img src="./assets/iconCss.svg" alt="" id="iconCss_logo" class="bio_skills_holder_skill_icon">
-                                    <h3>CSS</h3>
+                                    <div class="back">
+                                        <img src="./assets/iconCss.svg" alt="" id="iconCss_logo" class="bio_skills_holder_skill_icon">
+                                    </div>
+                                    <div class="front">
+                                        <div class="front_text">
+                                            <h3>CSS</h3>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="iconJs" class="bio_skills_holder_skill">
-                                    <img src="./assets/iconJs.svg" alt="" id="iconJs_logo" class="bio_skills_holder_skill_icon">
-                                    <h3>JS</h3>
+                                    <div class="back">
+                                        <img src="./assets/iconJs.svg" alt="" id="iconJs_logo" class="bio_skills_holder_skill_icon">
+                                    </div>
+                                    <div class="front">
+                                        <div class="front_text">
+                                            <h3>JS</h3>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                     </div>              
@@ -52,7 +70,7 @@
         <div class="bg">
                 <section class="projects">
 
-                    <h2 class="section_title">Projetos</h2>
+                    <h2 class="section_title">Ultimos Projetos</h2>
 
                     <div class="projects_container">
                         <article class="projects_article">
@@ -64,8 +82,8 @@
                                 um servidor com uma api.</p>
                             <div class="projects_article_footer">
                                 <p class="projects_article_footer_date">Data: 06/03/2021</p>
-                                <button class="projects_article_footer_button"><img src="./assets/iconLink.svg"
-                                        alt=""></button>
+                                <a class="projects_article_footer_a"><img src="./assets/iconLink.svg"
+                                        alt=""></a>
                             </div>
                         </article>
 
@@ -78,8 +96,8 @@
                                 um servidor com uma api.</p>
                             <div class="projects_article_footer">
                                 <p class="projects_article_footer_date">Data: 06/03/2021</p>
-                                <button class="projects_article_footer_button"><img src="./assets/iconLink.svg"
-                                        alt=""></button>
+                                <a class="projects_article_footer_a"><img src="./assets/iconLink.svg"
+                                        alt=""></a>
                             </div>
                         </article>
 
@@ -92,8 +110,8 @@
                                 um servidor com uma api.</p>
                             <div class="projects_article_footer">
                                 <p class="projects_article_footer_date">Data: 06/03/2021</p>
-                                <button class="projects_article_footer_button"><img src="./assets/iconLink.svg"
-                                        alt=""></button>
+                                <a class="projects_article_footer_a"><img src="./assets/iconLink.svg"
+                                        alt=""></a>
                             </div>
                         </article>
 
@@ -106,8 +124,8 @@
                                 um servidor com uma api.</p>
                             <div class="projects_article_footer">
                                 <p class="projects_article_footer_date">Data: 06/03/2021</p>
-                                <button class="projects_article_footer_button"><img src="./assets/iconLink.svg"
-                                        alt=""></button>
+                                <a class="projects_article_footer_a"><img src="./assets/iconLink.svg"
+                                        alt=""></a>
                             </div>
                         </article>
                     </div>
@@ -146,7 +164,7 @@
 
 
 
-    <script src="./js/scripts.js"></script>
+    <script type="module" src="./js/scripts.js"></script>
 </body>
 
 </html>
