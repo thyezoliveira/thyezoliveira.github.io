@@ -22,7 +22,7 @@ main {
 section {
 	width:90%;
 	height:90%;
-	background-color: transparent;
+	background-color: #333;
 	transition: all 1s ease-in-out;
 	position:relative;
 	border-radius:5px;
