@@ -1,32 +1,57 @@
 import { projects } from "./content.js";
 
-let section = document.querySelector(".container");
-let caixas = document.querySelectorAll(".caixa");
+let container = document.querySelector(".container");
+let boxes = document.querySelectorAll(".box");
 let btnClose = document.querySelector(".btn");
+let state = 0;
+let activeBox = "";
 
-caixas.forEach(caixa => {
-    caixa.addEventListener("click", growBox);
+boxes.forEach(box => {
+    box.addEventListener("click", growBox);
 })
 
+container.addEventListener("click", containerGridFlexToggle);
 btnClose.addEventListener("click", shrinkBox);
 
 function growBox(e){
-    console.log("ok1")
-	e.stopPropagation();	
 	this.classList.add('active');
+    activeBox = this.id;
+    this.id = "";
+
+    boxes.forEach(box => {
+        console.log(box);
+        if(box.classList[1] != "active"){
+            box.style.display = "none";
+        }
+    })
+
 	setTimeout(()=>{
-		console.log(document.querySelector('#btnClose'));
-		document.querySelector('#btnClose').classList.add('teste');
+		document.querySelector('#btnClose').classList.add('appear');
 	},500)
 }
 
 function shrinkBox(e){
-	e.stopPropagation();
-	document.querySelector('#btnClose').classList.remove('teste');
+    let box = document.querySelector('.box.active');
+    box.id = activeBox;
+    box.classList.remove('active');
+	document.querySelector('#btnClose').classList.remove('appear');
 	setTimeout(()=>{
-		let caixa = document.querySelector('.caixa.active')	;
-		caixa.classList.remove('active');
+        boxes.forEach(box => {
+            box.style.display = "flex";
+        })
 	}, 500);
+}
+
+function containerGridFlexToggle(){
+    if(state == 0){
+        container.style.display = "flex";
+        state = 1;
+    }else{
+        container.style.display = "grid";
+        state = 0;
+    }
+
+    console.log(state)
 }
 
 //Function to list all projects and append in a container within cards
