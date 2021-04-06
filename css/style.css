@@ -2,3 +2,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 @import url(./animations.css);
+
+*{
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+main {
+	width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	background-color: #444;
+}
+
+section {
+	width:90%;
+	height:90%;
+	background-color: transparent;
+	transition: all 1s ease-in-out;
+	position:relative;
+	border-radius:5px;
+	overflow: hidden;
+	display:flex;
+}
+
+.caixa {
+	background-color:#bbb;
+	width:10%;
+	height:10%;
+	cursor:pointer;
+	transition: all .5s ease;
+	border-radius:5px;
+	overflow: hidden;
+	margin: 10px;
+}
+.caixa img {
+	width: 100%;
+}
+
+.caixa p {
+	display: none;
+}
+.caixa.active {
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	top: 0;
+	left:0 ;
+	position: absolute;
+	margin: 0;
+}
+
+.caixa.active img {
+	display: none;
+}
+
+.caixa.active p {
+	padding:20px;
+	display: block;
+}
+
+#btnClose {
+	border-radius: 100%;
+	z-index:5;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	width:50px;
+	height:50px;
+	outline:none;
+	cursor:pointer;
+	transform: translatex(140px);
+	transition: all .5s ease;
+}
+#btnClose.teste {
+	transform: translatex(0px);
+}

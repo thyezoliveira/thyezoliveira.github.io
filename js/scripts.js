@@ -1,5 +1,45 @@
 import { projects } from "./content.js";
 
+let section = document.querySelector(".container");
+let caixas = document.querySelectorAll(".caixa");
+let btnClose = document.querySelector(".btn#btnClose");
+section.addEventListener("click", bgColorChangeRandom);
+
+caixas.forEach(caixa => {
+    caixa.addEventListener("click", growBox);		
+}
+
+btnClose.addEventListener("click", shrinkBox);
+
+function bgColorChangeRandom(e){
+	e.stopPropagation();
+	let randomRed = parseInt(Math.random() * 255);
+	let randomGreen = parseInt(Math.random() * 255);
+	let randomBlue = parseInt(Math.random() * 255);
+	
+	let rgb = `rgb(${randomRed},${randomGreen},${randomBlue})`;
+	
+	this.style.backgroundColor = rgb;
+}
+
+function growBox(e){
+	e.stopPropagation();	
+	this.classList.add('active');
+	setTimeout(()=>{
+		console.log(document.querySelector('#btnClose'))
+		document.querySelector('#btnClose').classList.add('teste');
+	},500)
+}
+
+function shrinkBox(e){
+	e.stopPropagation();
+	document.querySelector('#btnClose').classList.remove('teste');
+	setTimeout(()=>{
+		let caixa = document.querySelector('.caixa.active')	
+		caixa.classList.remove('active')
+	}, 500)
+}
+
 //Function to list all projects and append in a container within cards
 
 // let projectsHolder = document.querySelector(".projects");
