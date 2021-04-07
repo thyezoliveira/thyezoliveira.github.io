@@ -224,9 +224,115 @@ p.projects_article_footer_date {
     animation: pulse 2s ease-in-out infinite;
 }
 
-.projects_article_footer > a > #iconLink {
+/*Social*/
+
+.socialNetworks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMyEmail {
+    color: #428ca0;
+    text-decoration: none;
+}
+
+.linkSocial {
+    background-color: #ccc;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.socialLine1 {
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.socialLine2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.info {
+    background: rgba(0,0,0,0.75);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 30px;
+    color: #ccc;
+    font-family: 'Ubuntu';
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+.btnIcon {
+    fill:black;
+}
+
+#iconLink {
     fill: black;
 }
+
+#iconTwitter {
+    fill: #00acee;
+}
+
+#iconGithub {
+    fill: #24292e;
+}
+
+#iconInstagram {
+    fill: url(#instaGradient);
+}
+
+#iconLinkedin {
+    fill: #0e76a8;
+}
+
+#iconTelegram {
+    fill: #0088cc;
+}
+
+#btnTwitter {
+    animation: wave 2s ease-in-out infinite;
+}
+
+#btnGitHub {
+    animation: wave 2s ease-in-out infinite .5s;
+}
+
+#btnInstagram {
+    animation: wave 2s ease-in-out infinite 1s;
+}
+
+#btnLinkedIn {
+    animation: wave 2s ease-in-out infinite 1.5s;
+}
+
+#btnTelegram {
+    animation: wave 2s ease-in-out infinite 2s;
+}
+
+.credits {
+    text-align: center;
+}
+
+.heart {
+    display: inline;
+    animation: heartFade 2s ease-in-out infinite;
+}
+
+/*Others*/
 
 .active {
     width: 100%;

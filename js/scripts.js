@@ -103,8 +103,19 @@ projects.forEach((project, i) => {
         <p class="projects_article_description">${project.descricao}</p>
         <div class="projects_article_footer">
             <p class="projects_article_footer_date">${project.data}</p>
-            <a href="${project.link}" target="_blank" id="projectBtn${i}" class="projects_article_footer_a"><img id="iconLink" src="./assets/iconLink.svg"
-                    alt=""></a>
+            <a href="${project.link}" target="_blank" id="projectBtn${i}" class="projects_article_footer_a">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path class="btnIcon" id="iconLink" d="M15.2727 0H9.45453C9.05288 0 8.72725 0.325625 8.72725 0.727281C8.72725 1.12894 9.05288 1.45456 9.45453 1.45456H13.5169L6.03122 8.94031C5.74719 9.22434 5.74719 9.68478 6.03122 9.96881C6.17319 10.1108 6.35931 10.1818 6.54544 10.1818C6.73156 10.1818 6.91772 10.1108 7.05972 9.96878L14.5455 2.48306V6.54547C14.5455 6.94713 14.8711 7.27275 15.2727 7.27275C15.6744 7.27275 16 6.94713 16 6.54547V0.727281C16 0.325625 15.6744 0 15.2727 0Z"/>
+                        <path class="btnIcon" id="iconLink" d="M12.3636 7.27275C11.962 7.27275 11.6363 7.59837 11.6363 8.00003V14.5455H1.45453V4.36365H8C8.40166 4.36365 8.72728 4.03803 8.72728 3.63637C8.72728 3.23471 8.40166 2.90912 8 2.90912H0.727281C0.325625 2.90912 0 3.23474 0 3.6364V15.2728C0 15.6744 0.325625 16 0.727281 16H12.3637C12.7653 16 13.0909 15.6744 13.0909 15.2727V8.00003C13.0909 7.59837 12.7653 7.27275 12.3636 7.27275Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="16" height="16" fill="black"/>
+                        </clipPath>
+                    </defs>
+                </svg>            
+            </a>
         </div>
     </article>
     `;
