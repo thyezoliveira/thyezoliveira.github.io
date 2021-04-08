@@ -3,55 +3,60 @@ import { projects } from "./content.js";
 let container = document.querySelector(".container");
 let boxes = document.querySelectorAll(".box");
 let btnClose = document.querySelector(".btn");
+let projectsHolder = document.querySelector(".projects");
 let boxesIds = ["about","projects","skills","articles","social"];
 let state = 0;
-let activeBox = "";
+let activeBoxId = "";
+let allProjects = "";
 
-boxes.forEach(box => {
-    box.addEventListener("click", growBox);
-})
+startAllEventListeners()
 
-container.addEventListener("click", containerGridFlexToggle);
-btnClose.addEventListener("click", shrinkBox);
-
-function growBox(e){
-	this.classList.add('active');
+function startAllEventListeners(){
+    boxes.forEach(box => {
+        box.addEventListener("click", growBox);
+    })
     
-    //if(this.id != "null"){
-        activeBox = this.id;
-        
-        boxes.forEach(box => {
-            if(box.classList[1] != "active"){
-                box.style.display = "none";
-            }
-        })
+    container.addEventListener("click", containerGridFlexToggle);
+    btnClose.addEventListener("click", shrinkBox);
+}
 
-        
-        setTimeout(()=>{
-            container.removeEventListener("click", containerGridFlexToggle);
-            showBackButton();
-        },500)
+function growBox(){
+	this.classList.add('active');
+    activeBoxId = this.id;
+    
+    desactivateNonActiveBoxes()
+    
+    setTimeout(()=>{
+        container.removeEventListener("click", containerGridFlexToggle);
+        showBackButton();
+    },500)
 
-        startActiveBoxContent();
-        //this.id = null;
-    //}
+    startActiveBoxContent();
+}
+
+function desactivateNonActiveBoxes(){
+    boxes.forEach(box => {
+        if(box.classList[2] != "active"){
+            box.style.display = "none";
+        }
+    })
 }
 
 function startActiveBoxContent(){
     let activeBox = document.querySelector(".box.active");
+    console.log(activeBox)
     if(activeBox.id != boxesIds[0]){
         activeBox.children[0].style.display = "none";
         activeBox.children[1].style.paddingTop = "20px";
     }
+    activeBox.children[0].classList.add("titleTopBlur");
     activeBox.children[1].classList.add("fullScreen");
-    // if(activeBox == boxesIds[index]){
-    //     console.log("ok")
-    // }
 }
 
 function endActiveBoxContent(){
     let activeBox = document.querySelector(".box.active");
     activeBox.children[0].style.display = "initial";
+    activeBox.children[0].classList.remove("titleTopBlur");
     activeBox.children[1].classList.remove("fullScreen");
     activeBox.children[1].style.paddingTop = "0";
 }
@@ -65,12 +70,12 @@ function hideBackButton(){
 }
 
 function shrinkBox(e){
-    endActiveBoxContent()
-    container.addEventListener("click", containerGridFlexToggle);
-    let box = document.querySelector('.box.active');
-    box.id = activeBox;
-    box.classList.remove('active');
+    let activeBox = document.querySelector('.box.active');
+    endActiveBoxContent();
 	hideBackButton();
+    startAllEventListeners();
+    activeBox.id = activeBoxId;
+    activeBox.classList.remove('active');
 	setTimeout(()=>{
         boxes.forEach(box => {
             box.style.display = "flex";
@@ -87,11 +92,6 @@ function containerGridFlexToggle(){
         state = 0;
     }
 }
-
-//Function to list all projects and append in a container within cards
-
-let projectsHolder = document.querySelector(".projects");
-let allProjects = "";
 
 projects.forEach((project, i) => {
     let template = `
