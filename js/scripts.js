@@ -13,14 +13,14 @@ startAllEventListeners()
 
 function startAllEventListeners(){
     boxes.forEach(box => {
-        box.addEventListener("click", growBox);
+        box.addEventListener("click", growActiveBox);
     })
     
     container.addEventListener("click", containerGridFlexToggle);
-    btnClose.addEventListener("click", shrinkBox);
+    btnClose.addEventListener("click", shrinkActiveBox);
 }
 
-function growBox(){
+function growActiveBox(){
 	this.classList.add('active');
     activeBoxId = this.id;
     
@@ -51,6 +51,17 @@ function startActiveBoxContent(){
     }
     activeBox.children[0].classList.add("titleTopBlur");
     activeBox.children[1].classList.add("fullScreen");
+    let fullScreenBox = document.querySelector(".fullScreen");
+    fullScreenBox.addEventListener('scroll', getEndOfScrollToHideBackButton);
+}
+
+function getEndOfScrollToHideBackButton(e){
+    let point = parseInt(e.target.scrollHeight - window.innerHeight);
+    if(e.target.scrollTop > point){
+        hideBackButton();
+    } else {
+        showBackButton();
+    }
 }
 
 function endActiveBoxContent(){
@@ -69,7 +80,7 @@ function hideBackButton(){
     document.querySelector('#btnClose').classList.remove('appear');
 }
 
-function shrinkBox(e){
+function shrinkActiveBox(e){
     let activeBox = document.querySelector('.box.active');
     endActiveBoxContent();
 	hideBackButton();

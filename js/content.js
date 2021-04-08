@@ -6,5 +6,13 @@ export const projects = [
         descricao: "Um mini jogo de cartas, no estilo Super Trunfo. Desenvolvido em Javascript.",
         data: "01/04/2021",
         link: "https://github.com/thyezoliveira/cardGame_SuperTrunfo"
+    },
+    {
+        titulo: "Clone Club House",
+        imagem: "https://github.com/thyezoliveira/Treinamento_Clone_CH/raw/main/assets/meuApp_wImages.png",
+        imagemAlt: "Interface do aplicativo club house.",
+        descricao: "Um clone da interface do aplicativo club house, usando TailwindCSS.",
+        data: "15/02/2021",
+        link: "https://github.com/thyezoliveira/Treinamento_Clone_CH"
     }
 ]

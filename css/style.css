@@ -117,17 +117,13 @@ section {
 
 .fullScreen {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
+    /* justify-content: center; */
     overflow-y: auto;
     background-color: rgb(68 68 68 / 50%);
-}
-
-.titleTopBlur{
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
 }
 
 h1.title {
@@ -137,6 +133,14 @@ h1.title {
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+/* About */
+
+.titleTopBlur{
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
 }
 
 #titleAbout {
@@ -177,6 +181,8 @@ p.bio_text {
     backdrop-filter: blur(5px);
 }
 
+/* Projects */
+
 article.projects_article {
     max-width: 260px;
     background-color: #111;
@@ -185,6 +191,7 @@ article.projects_article {
     padding-bottom: 10px;
     box-shadow: -5px 9px 20px 5px #0e1017;
     border: solid 1px #252525;
+    margin: 20px 0;
 }
 
 header.projects_article_header {
