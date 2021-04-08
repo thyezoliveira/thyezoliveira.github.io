@@ -1,4 +1,4 @@
-import { projects } from "./content.js";
+import { projects } from "./projects.js";
 
 let container = document.querySelector(".container");
 let boxes = document.querySelectorAll(".box");
