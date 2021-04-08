@@ -48,6 +48,9 @@ function startActiveBoxContent(){
         activeBox.children[0].style.display = "none";
         activeBox.children[1].style.paddingTop = "20px";
     }
+    if(activeBox.id == boxesIds[4]){
+        activeBox.children[1].children[0].style.justifyContent = "space-between";
+    }
     activeBox.children[0].classList.add("titleTopBlur");
     activeBox.children[1].classList.add("fullScreen");
     let fullScreenBox = document.querySelector(".fullScreen");
@@ -69,6 +72,9 @@ function endActiveBoxContent(){
     activeBox.children[0].classList.remove("titleTopBlur");
     activeBox.children[1].classList.remove("fullScreen");
     activeBox.children[1].style.paddingTop = "0";
+    if(activeBox.id == boxesIds[4]){
+        activeBox.children[1].children[0].style.justifyContent = "space-between";
+    }
 }
 
 function showBackButton(){
