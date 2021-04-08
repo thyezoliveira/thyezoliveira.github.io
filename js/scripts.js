@@ -44,7 +44,6 @@ function desactivateNonActiveBoxes(){
 
 function startActiveBoxContent(){
     let activeBox = document.querySelector(".box.active");
-    console.log(activeBox)
     if(activeBox.id != boxesIds[0]){
         activeBox.children[0].style.display = "none";
         activeBox.children[1].style.paddingTop = "20px";
