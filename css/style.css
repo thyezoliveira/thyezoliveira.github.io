@@ -189,6 +189,28 @@ img#avatar2 {
     backdrop-filter: blur(5px);
 }
 
+.hobbies {
+    list-style: inside;
+}
+
+.hobbies > li {
+    margin: 10px 0;
+}
+
+::marker {
+    color: #fff;
+    animation: listBlink 3s ease-in-out infinite;
+    list-style-type: square;
+}
+
+blockquote {
+    background: rgb(0 0 0 / 40%);
+    padding: 13px;
+    border-left: solid 5px gray;
+    font-style: italic;
+    font-weight: 100;
+}
+
 /* Projects */
 
 article.projects_article {

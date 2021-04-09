@@ -25,6 +25,18 @@
     }
 }
 
+@keyframes listBlink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes heartFade {
     0% {
         color: rgb(179, 43, 43);
