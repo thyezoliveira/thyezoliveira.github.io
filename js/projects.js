@@ -6,7 +6,7 @@ export const projects = [
         descricao: "Um mini jogo de cartas, no estilo Super Trunfo. Desenvolvido em Javascript.",
         data: "01/04/2021",
         link: "https://github.com/thyezoliveira/cardGame_SuperTrunfo",
-        acessivel: "Projeto do Github + Demo do CodePen"
+        acessivel: "Projeto do Github + Demo jogável no CodePen"
     },
     {
         titulo: "To-do",
@@ -15,7 +15,7 @@ export const projects = [
         descricao: "O To-do, é um app de lista de tarefas com objetivo simples de adicionar e remover tarefas de uma lista.",
         data: "05/03/2021",
         link: "https://github.com/thyezoliveira/projetoDeEstudo_listaDeTarefas",
-        acessivel: "Projeto do Github"
+        acessivel: "Projeto do Github / Estudo"
     },   
     {
         titulo: "Clone Club House",
@@ -24,6 +24,6 @@ export const projects = [
         descricao: "Um clone da interface do aplicativo club house, usando TailwindCSS.",
         data: "24/02/2021",
         link: "https://github.com/thyezoliveira/Treinamento_Clone_CH",
-        acessivel: "Projeto do Github"
+        acessivel: "Projeto do Github / Estudo"
     }
 ]
