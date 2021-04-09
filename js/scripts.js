@@ -24,7 +24,7 @@ function growActiveBox(){
 	this.classList.add('active');
     activeBoxId = this.id;
     
-    desactivateNonActiveBoxes()
+    nonActiveBoxesDisplayNone();
     
     setTimeout(()=>{
         container.removeEventListener("click", containerGridFlexToggle);
@@ -34,7 +34,7 @@ function growActiveBox(){
     startActiveBoxContent();
 }
 
-function desactivateNonActiveBoxes(){
+function nonActiveBoxesDisplayNone(){
     boxes.forEach(box => {
         if(box.classList[2] != "active"){
             box.style.display = "none";
@@ -58,7 +58,10 @@ function startActiveBoxContent(){
 }
 
 function getEndOfScrollToHideBackButton(e){
-    let point = parseInt(e.target.scrollHeight - window.innerHeight);
+    let scrollHeight = e.target.scrollHeight;
+    let windowHeight = window.innerHeight;
+    let point = parseInt(scrollHeight - windowHeight);
+    
     if(e.target.scrollTop > point){
         hideBackButton();
     } else {
@@ -92,11 +95,7 @@ function shrinkActiveBox(e){
     startAllEventListeners();
     activeBox.id = activeBoxId;
     activeBox.classList.remove('active');
-	setTimeout(()=>{
-        boxes.forEach(box => {
-            box.style.display = "flex";
-        })
-	}, 500);
+    
 }
 
 function containerGridFlexToggle(){
@@ -106,7 +105,14 @@ function containerGridFlexToggle(){
     }else{
         container.style.display = "grid";
         state = 0;
+        allBoxesDisplayFlex();
     }
+}
+
+function allBoxesDisplayFlex(){
+    boxes.forEach(box => {
+        box.style.display = "flex";
+    })
 }
 
 projects.forEach((project, i) => {
