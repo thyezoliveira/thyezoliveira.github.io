@@ -15,9 +15,12 @@ function startAllEventListeners(){
     boxes.forEach(box => {
         box.addEventListener("click", growActiveBox);
     })
-    
-    container.addEventListener("click", containerGridFlexToggle);
     btnClose.addEventListener("click", shrinkActiveBox);
+    activateContainerListener();
+}
+
+function activateContainerListener(){
+    container.addEventListener("click", containerGridFlexToggle);
 }
 
 function growActiveBox(){
@@ -44,17 +47,30 @@ function nonActiveBoxesDisplayNone(){
 
 function startActiveBoxContent(){
     let activeBox = document.querySelector(".box.active");
-    if(activeBox.id != boxesIds[0]){
-        activeBox.children[0].style.display = "none";
-        activeBox.children[1].style.paddingTop = "20px";
-    }
-    if(activeBox.id == boxesIds[4]){
-        activeBox.children[1].children[0].style.justifyContent = "space-between";
-    }
+    
+    allBoxTitleDisplayNoneButNotThis(activeBox);
+    spaceSocialBlocksVerticaly(activeBox);
+    setBoxContentFullscreen(activeBox);
+}
+
+function setBoxContentFullscreen(activeBox){
     activeBox.children[0].classList.add("titleTopBlur");
     activeBox.children[1].classList.add("fullScreen");
     let fullScreenBox = document.querySelector(".fullScreen");
     fullScreenBox.addEventListener('scroll', getEndOfScrollToHideBackButton);
+}
+
+function spaceSocialBlocksVerticaly(activeBox){
+    if(activeBox.id == boxesIds[4]){
+        activeBox.children[1].children[0].style.justifyContent = "space-between";
+    }
+}
+
+function allBoxTitleDisplayNoneButNotThis(activeBox){
+    let activeBoxTitle = activeBox.children[0];
+    if(activeBox.id != boxesIds[0]){
+        activeBoxTitle.style.display = "none";
+    }
 }
 
 function getEndOfScrollToHideBackButton(e){
@@ -92,7 +108,7 @@ function shrinkActiveBox(e){
     let activeBox = document.querySelector('.box.active');
     endActiveBoxContent();
 	hideBackButton();
-    startAllEventListeners();
+    activateContainerListener();
     activeBox.id = activeBoxId;
     activeBox.classList.remove('active');
     
