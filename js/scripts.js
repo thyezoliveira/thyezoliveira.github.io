@@ -138,6 +138,7 @@ projects.forEach((project, i) => {
             <h3>${project.titulo}</h3>
         </header>
         <img src="${project.imagem}" alt="${project.imagemAlt}" class="projects_article_thumb">
+        <p class="projects_article_description">Tipo: <span class="projects_article_type">${project.acessivel}</span></p>
         <p class="projects_article_description">${project.descricao}</p>
         <div class="projects_article_footer">
             <p class="projects_article_footer_date">${project.data}</p>
