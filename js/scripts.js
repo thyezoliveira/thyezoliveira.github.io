@@ -132,6 +132,7 @@ function allBoxesDisplayFlex(){
 }
 
 projects.forEach((project, i) => {
+    let link = (project.tipo == "demo") ? project.linkDemo : project.linkGithub;
     let template = `
     <article class="projects_article">
         <header class="projects_article_header">
@@ -142,7 +143,8 @@ projects.forEach((project, i) => {
         <p class="projects_article_description">Tipo: <span class="projects_article_type">${project.acessivel}</span></p>
         <div class="projects_article_footer">
             <p class="projects_article_footer_date">${project.data}</p>
-            <a href="${project.link}" target="_blank" id="projectBtn${i}" class="projects_article_footer_a">
+
+            <a href="${link}" target="_blank" id="projectBtn${i}" class="projects_article_footer_a">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                         <path class="btnIcon" id="iconLink" d="M15.2727 0H9.45453C9.05288 0 8.72725 0.325625 8.72725 0.727281C8.72725 1.12894 9.05288 1.45456 9.45453 1.45456H13.5169L6.03122 8.94031C5.74719 9.22434 5.74719 9.68478 6.03122 9.96881C6.17319 10.1108 6.35931 10.1818 6.54544 10.1818C6.73156 10.1818 6.91772 10.1108 7.05972 9.96878L14.5455 2.48306V6.54547C14.5455 6.94713 14.8711 7.27275 15.2727 7.27275C15.6744 7.27275 16 6.94713 16 6.54547V0.727281C16 0.325625 15.6744 0 15.2727 0Z"/>
@@ -155,6 +157,7 @@ projects.forEach((project, i) => {
                     </defs>
                 </svg>            
             </a>
+
         </div>
     </article>
     `;
