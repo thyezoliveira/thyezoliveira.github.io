@@ -13,13 +13,3 @@
 .contentBlock > p {
     margin-left: 5px;
 }
-
-#htmlSvg {
-    float: right;
-    margin-right: 10px;
-}
-
-#htmlIcon {
-    fill: #d63c15;
-}
-
